@@ -17,7 +17,7 @@ const photos = {
 const milestones = [
   {
     year: "1920",
-    title: "British Silk Seed Aided Grainage",
+    title: "BRITISH AIDED SILK SEED GRAINAGE",
     text: "The foundation of our legacy dates back to 1920, when our founder, Late Shri G. Devaappa, established the British Silk Seed Aided Grainage. The organisation initially focused on the production and development of quality silkworm seeds, contributing to the early stages of the silk value chain. This marked the beginning of a journey deeply connected with the growth and development of the silk industry. Following this, the family expanded its activities into silkworm rearing and cocoon production, gaining valuable expertise and experience in sericulture.",
   },
   {
