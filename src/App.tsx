@@ -17,28 +17,28 @@ const photos = {
 const milestones = [
   {
     year: "1920",
-    title: "British Silk Seed Grainage",
-    text: "Our founder began with a modest seed-grainage operation, processing raw mulberry silk cocoons sourced from the farms around Channapatana.",
+    title: "British Silk Seed Aided Grainage",
+    text: "The foundation of our legacy dates back to 1920, when our founder, Late Shri G. Devaappa, established the British Silk Seed Aided Grainage. The organisation initially focused on the production and development of quality silkworm seeds, contributing to the early stages of the silk value chain. This marked the beginning of a journey deeply connected with the growth and development of the silk industry. Following this, the family expanded its activities into silkworm rearing and cocoon production, gaining valuable expertise and experience in sericulture.",
   },
   {
-    year: "1930",
+    year: "1928",
     title: "Entering Silk Reeling",
-    text: "We transitioned from grainage to silk reeling using traditional hand-charkha methods, bringing greater value and consistency to every filament.",
+    text: "In 1930, the business took an important step forward by entering the silk reeling industry. Silk reeling was started on a very small scale using traditional methods through a cottage filature and hand charkha. This marked the beginning of SR Textile Silk Mills' journey into silk manufacturing. What started as a small traditional operation was built on hard work, skilled craftsmanship, and a strong commitment to producing quality silk.",
   },
   {
     year: "1960",
-    title: "Expansion Into Larger Production",
-    text: "Under Late Shri D. Ravindranath, the cottage filature grew into a larger plant with improved equipment and significantly greater capacity.",
+    title: "Expansion into Larger Production",
+    text: "In 1960, the second generation took the responsibility of carrying the legacy forward. Under the leadership of Late Shri D. Ravindranath, the small cottage filature was expanded into a larger silk production unit. With his vision and dedication, production capabilities grew while preserving the traditional knowledge and expertise that had been developed over decades. This period played a significant role in establishing a stronger foundation for the future growth of the organisation.",
   },
   {
     year: "1983",
-    title: "The Third Generation",
-    text: "Mr. C.R. Jagadeesh and Late Shri C.R. Devraj introduced multi-end automatic reeling, modernising the workforce and quality controls.",
+    title: "The Third Generation – A New Chapter",
+    text: "In 1983, the third generation entered the business, with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system was gradually transformed, and advanced Multi-End Silk Filatures were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
   },
   {
-    year: "Today",
-    title: "Automatic Silk Reeling",
-    text: "A state-of-the-art automatic reeling unit grew from nearly 120 kg per day to 600 kg per day through focused, continuous upgrades.",
+    year: "Modern Era",
+    title: "A New Era of Automatic Silk Reeling",
+    text: "Continuing the journey of innovation and technological advancement, the organisation later installed an Automatic Silk Reeling (ARM) Unit. The automatic unit initially operated with a production capacity of approximately 120 kilograms per day. Through continuous development, improved technology, operational expertise, and the dedication of our skilled workforce, the production capacity of the same unit has grown significantly. Today, SR Textile Silk Mills proudly operates with a production capacity of approximately 600 kilograms per day, representing a remarkable transformation from its humble beginnings.",
   },
 ];
 
