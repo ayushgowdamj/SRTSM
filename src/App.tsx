@@ -46,7 +46,7 @@ const advantages = [
   ["chain", "Reliable Supply Chain", "Deep sourcing relationships across Karnataka keep dealer orders moving consistently."],
   ["shield", "Quality Assurance", "In-house, ISO-aligned testing protects denier, twist, moisture and grade consistency."],
   ["people", "Dealer-First Partnership", "Responsive support, transparent communication and flexible long-term contracts."],
-  ["tag", "Competitive Pricing", "Factory-direct pricing with no middlemen — ensuring you get the best value on every order without compromising on silk quality."],
+  ["tag", "Decades of Trust", "With over a century of silk heritage, we have built lasting relationships founded on integrity, consistency, and an unwavering commitment to quality."],
   ["truck", "Pan-India Logistics", "Dependable dispatch to major silk hubs including Varanasi, Surat and Bengaluru."],
   ["flask", "Samples & Consultation", "Expert guidance and evaluated samples before you commit to a bulk order."],
 ];
