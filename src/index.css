@@ -23,9 +23,9 @@ a { color: inherit; text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .site-shell { overflow: clip; position: relative; }
 .site-watermark { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-.site-watermark--logo { z-index: 26; display: flex; align-items: flex-end; justify-content: center; }
+.site-watermark--logo { z-index: 0; display: flex; align-items: center; justify-content: flex-end; padding-right: clamp(24px, 8vw, 140px); }
 .site-watermark img.site-watermark__factory { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; opacity: .22; filter: grayscale(.2) saturate(.7) brightness(1.15); }
-.site-watermark img.site-watermark__logo { width: 132px; height: 132px; margin: 0 0 3.8vh; object-fit: contain; opacity: .2; }
+.site-watermark img.site-watermark__logo { width: clamp(240px, 32vw, 520px); height: auto; aspect-ratio: 1; margin: 0; object-fit: cover; border-radius: 50%; clip-path: circle(50%); opacity: .075; filter: saturate(.65) sepia(.1); }
 main, footer { position: relative; z-index: 1; }
 .scroll-progress { width: var(--scroll-progress, 0%); height: 3px; position: fixed; top: 0; left: 0; z-index: 100; background: linear-gradient(90deg, var(--gold-dark), #e4cb77); box-shadow: 0 0 12px rgba(201,168,76,.5); }
 .reveal { opacity: 0; transform: translateY(42px); transition: opacity .85s cubic-bezier(.22,1,.36,1), transform .85s cubic-bezier(.22,1,.36,1); }
@@ -150,6 +150,20 @@ main, footer { position: relative; z-index: 1; }
 .product-card dt { color: var(--muted); }
 .product-card dd { margin: 0; font-weight: 700; text-align: right; }
 .card-link { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 17px; border-top: 1px solid var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+
+.mill-gallery { position: relative; background: color-mix(in srgb, var(--cream-deep) 76%, transparent); }
+.mill-gallery__heading { display: flex; align-items: end; justify-content: space-between; gap: 80px; }
+.mill-gallery__aside { max-width: 280px; margin: 0 0 8px; padding-left: 24px; color: var(--muted); border-left: 1px solid var(--gold); font-size: 12px; line-height: 1.8; }
+.mill-gallery__grid { margin-top: 65px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; }
+.mill-gallery figure { margin: 0; background: var(--white); border: 1px solid var(--line); }
+.mill-gallery figure > div { height: 360px; overflow: hidden; }
+.mill-gallery figure img { transition: transform .8s cubic-bezier(.22,1,.36,1), filter .5s; filter: saturate(.86); }
+.mill-gallery figure:hover img { transform: scale(1.045); filter: none; }
+.mill-gallery__feature > div { height: 470px; }
+.mill-gallery figcaption { padding: 25px 28px 29px; }
+.mill-gallery figcaption span { display: block; margin-bottom: 12px; color: var(--gold-dark); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+.mill-gallery figcaption strong { display: block; font-family: var(--display); font-size: 26px; line-height: 1.15; }
+.mill-gallery figcaption p { max-width: 500px; margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
 
 .why { position: relative; background: color-mix(in srgb, var(--cream) 84%, transparent); }
 .why::after { content: "SRTSM"; position: absolute; left: 50%; top: 30%; color: rgba(201,168,76,.045); font-family: var(--display); font-size: 250px; transform: translateX(-50%); pointer-events: none; }
@@ -320,6 +334,12 @@ main, footer { position: relative; z-index: 1; }
   .product-grid { grid-template-columns: 1fr; }
   .product-card { min-height: auto; }
   .product-card__body { padding: 34px 28px 38px; }
+  .site-watermark--logo { justify-content: center; padding-right: 0; }
+  .site-watermark img.site-watermark__logo { width: min(76vw, 360px); opacity: .06; }
+  .mill-gallery__heading { display: block; }
+  .mill-gallery__aside { margin-top: 30px; }
+  .mill-gallery__grid { grid-template-columns: 1fr; margin-top: 48px; }
+  .mill-gallery__feature > div, .mill-gallery figure > div { height: 360px; }
   .advantage-grid { grid-template-columns: 1fr 1fr; }
   .advantage { min-height: 250px; padding: 28px; }
   .why::after { font-size: 120px; }

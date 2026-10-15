@@ -3,8 +3,10 @@ import automaticReeling from "./assets/automatic-reeling-unit.png";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
 import productionFloor from "./assets/srtsm-production-floor.jpg";
 import silkBales from "./assets/srtsm-silk-bales.jpg";
+import silkFibres from "./assets/srtsm-silk-fibres.png";
 import silkHanks from "./assets/srtsm-silk-hanks.jpg";
 import srtsmLogo from "./assets/srtsm-logo.png";
+import warehouseRacks from "./assets/srtsm-warehouse-racks.png";
 
 const photos = {
   reeling: automaticReeling,
@@ -12,6 +14,8 @@ const photos = {
   productionFloor,
   silkHanks,
   silkBales,
+  warehouseRacks,
+  silkFibres,
 };
 
 const milestones = [
@@ -184,7 +188,7 @@ function App() {
 
   useEffect(() => {
     const revealTargets = document.querySelectorAll(
-      ".section-title, .product-card, .advantage, .factory__heading, .factory__gallery figure, .factory__features > div, .contact__header, .contact__grid, .map-wrap, .mill-arrival__content",
+      ".section-title, .product-card, .advantage, .factory__heading, .factory__gallery figure, .factory__features > div, .contact__header, .contact__grid, .map-wrap, .mill-arrival__content, .mill-gallery__heading, .mill-gallery figure",
     );
     revealTargets.forEach((element) => element.classList.add("reveal"));
     const revealObserver = new IntersectionObserver(
@@ -257,7 +261,7 @@ function App() {
     }
   }
 
-  const nav = [["Legacy", "#legacy"], ["Products", "#products"], ["Why Us", "#why-us"], ["Factory", "#factory"], ["Contact", "#contact"]];
+  const nav = [["Legacy", "#legacy"], ["Products", "#products"], ["Gallery", "#gallery"], ["Why Us", "#why-us"], ["Factory", "#factory"], ["Contact", "#contact"]];
 
   return (
     <div className="site-shell">
@@ -374,6 +378,29 @@ function App() {
                   <a href="#contact" className="card-link">Discuss your requirement <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" className="mill-gallery section">
+          <div className="container">
+            <div className="mill-gallery__heading">
+              <SectionTitle
+                eyebrow="From the mill"
+                title="The work behind every thread."
+                intro="These views show the care carried through our process—from organised production and handling to the natural silk fibres that become dependable yarn for your loom."
+              />
+              <p className="mill-gallery__aside">A closer look at the people, material and mill discipline behind SRTSM supply.</p>
+            </div>
+            <div className="mill-gallery__grid">
+              <figure className="mill-gallery__feature">
+                <div><img src={photos.warehouseRacks} alt="Finished silk components organised across the SRTSM warehouse" loading="lazy" /></div>
+                <figcaption><span>01</span><strong>Ready for the next stage</strong><p>Our warehouse keeps finished components organised and protected, helping us prepare orders accurately and dispatch with confidence.</p></figcaption>
+              </figure>
+              <figure>
+                <div><img src={photos.silkFibres} alt="Close-up of lustrous raw silk fibres prepared for processing" loading="lazy" /></div>
+                <figcaption><span>02</span><strong>Silk in its purest form</strong><p>Long, lustrous fibres are the starting point for the strength, smoothness and consistency our dealers expect from every batch.</p></figcaption>
+              </figure>
             </div>
           </div>
         </section>
