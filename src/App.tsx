@@ -1,17 +1,17 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import automaticReeling from "./assets/automatic-reeling-unit.png";
-import factoryExterior from "./assets/srtsm-factory-exterior.jpeg";
-import factoryExteriorWide from "./assets/srtsm-factory-exterior-wide.png";
+import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
+import productionFloor from "./assets/srtsm-production-floor.jpg";
+import silkBales from "./assets/srtsm-silk-bales.jpg";
+import silkHanks from "./assets/srtsm-silk-hanks.jpg";
 import srtsmLogo from "./assets/srtsm-logo.png";
-import windingCloseup from "./assets/silk-winding-closeup.png";
-import windingFloor from "./assets/silk-winding-floor.png";
 
 const photos = {
   reeling: automaticReeling,
   exterior: factoryExterior,
-  exteriorWide: factoryExteriorWide,
-  windingCloseup,
-  windingFloor,
+  productionFloor,
+  silkHanks,
+  silkBales,
 };
 
 const milestones = [
@@ -261,6 +261,12 @@ function App() {
 
   return (
     <div className="site-shell">
+      <div className="site-watermark" aria-hidden="true">
+        <img className="site-watermark__factory" src={photos.exterior} alt="" />
+      </div>
+      <div className="site-watermark site-watermark--logo" aria-hidden="true">
+        <img className="site-watermark__logo" src={srtsmLogo} alt="" />
+      </div>
       <div className="scroll-progress" aria-hidden="true" />
       <header className="nav-wrap">
         <nav className="nav container" aria-label="Main navigation">
@@ -349,7 +355,7 @@ function App() {
             <SectionTitle eyebrow="Our offerings" title="Silk engineered for your loom." intro="Consistent raw material, flexible specifications, and a reliable supply partner for dealers and textile manufacturers." />
             <div className="product-grid">
               <article className="product-card">
-                <div className="product-card__image"><img src={photos.windingCloseup} alt="SRTSM raw silk thread arranged on winding frames" loading="lazy" /><span>01</span></div>
+                <div className="product-card__image"><img src={photos.silkHanks} alt="Finished SRTSM raw silk hanks ready for weaving" loading="lazy" /><span>01</span></div>
                 <div className="product-card__body">
                   <span className="product-card__type">Dealer catalogue</span>
                   <h3>Raw Silk Yarn<br />& Thread</h3>
@@ -359,7 +365,7 @@ function App() {
                 </div>
               </article>
               <article className="product-card product-card--reverse">
-                <div className="product-card__image"><img src={photos.windingFloor} alt="Bulk silk winding frames on the SRTSM factory floor" loading="lazy" /><span>02</span></div>
+                <div className="product-card__image"><img src={photos.silkBales} alt="Graded SRTSM silk bales packed for bulk dealer supply" loading="lazy" /><span>02</span></div>
                 <div className="product-card__body">
                   <span className="product-card__type">Custom supply</span>
                   <h3>Bulk Raw<br />Silk Supply</h3>
@@ -389,7 +395,7 @@ function App() {
 
         <section className="mill-arrival" aria-label="SRTSM factory exterior">
           <div className="mill-arrival__image">
-            <img src={photos.exteriorWide} alt="Sri Ranganatha Textile Silk Mills factory exterior in Channapatana" loading="lazy" />
+            <img src={photos.exterior} alt="Sri Ranganatha Textile Silk Mills factory exterior in Channapatana" loading="lazy" />
           </div>
           <div className="mill-arrival__shade" />
           <div className="container mill-arrival__content">
@@ -409,9 +415,9 @@ function App() {
             <p className="factory__aside">Every batch is watched, measured and documented—because consistency at the mill means confidence at the loom.</p>
           </div>
           <div className="factory__gallery">
-            <figure className="factory__main"><img src={photos.reeling} alt="SRTSM automatic silk reeling production line" loading="lazy" /><figcaption><span>01</span> Automatic reeling unit</figcaption></figure>
-            <figure><img src={photos.windingFloor} alt="SRTSM silk winding floor" loading="lazy" /><figcaption><span>02</span> Winding floor</figcaption></figure>
-            <figure><img src={photos.windingCloseup} alt="Close view of silk on winding frames" loading="lazy" /><figcaption><span>03</span> Silk in process</figcaption></figure>
+            <figure className="factory__main"><img src={photos.productionFloor} alt="SRTSM silk production floor with reeling and winding machinery" loading="lazy" /><figcaption><span>01</span> Production floor</figcaption></figure>
+            <figure><img src={photos.silkHanks} alt="Finished silk hanks hanging at the SRTSM mill" loading="lazy" /><figcaption><span>02</span> Silk hanks</figcaption></figure>
+            <figure><img src={photos.silkBales} alt="Packed SRTSM silk bales ready for dispatch" loading="lazy" /><figcaption><span>03</span> Packed bales</figcaption></figure>
           </div>
           <div className="container factory__features">
             {factoryFeatures.map(([icon, title, text]) => <div key={title}><Icon name={icon as IconName} size={25} /><span><strong>{title}</strong><small>{text}</small></span></div>)}
