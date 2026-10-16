@@ -5,6 +5,8 @@ import productionFloor from "./assets/srtsm-production-floor.jpg";
 import silkBales from "./assets/srtsm-silk-bales.jpg";
 import silkHanks from "./assets/srtsm-silk-hanks.jpg";
 import srtsmLogo from "./assets/srtsm-logo.png";
+import finishedSilkReels from "./assets/finished-silk-reels.jpg";
+import rawSilkLustre from "./assets/raw-silk-lustre.jpg";
 
 const photos = {
   reeling: automaticReeling,
@@ -12,6 +14,8 @@ const photos = {
   productionFloor,
   silkHanks,
   silkBales,
+  finishedSilkReels,
+  rawSilkLustre,
 };
 
 const milestones = [
@@ -355,7 +359,7 @@ function App() {
             <SectionTitle eyebrow="Our offerings" title="Silk engineered for your loom." intro="Consistent raw material, flexible specifications, and a reliable supply partner for dealers and textile manufacturers." />
             <div className="product-grid">
               <article className="product-card">
-                <div className="product-card__image"><img src={photos.silkHanks} alt="Finished SRTSM raw silk hanks ready for weaving" loading="lazy" /><span>01</span></div>
+                <div className="product-card__image"><img src={photos.rawSilkLustre} alt="Finished SRTSM raw silk hanks ready for weaving" loading="lazy" /><span>01</span></div>
                 <div className="product-card__body">
                   <span className="product-card__type">Dealer catalogue</span>
                   <h3>Raw Silk Yarn<br />& Thread</h3>
@@ -416,8 +420,9 @@ function App() {
           </div>
           <div className="factory__gallery">
             <figure className="factory__main"><img src={photos.productionFloor} alt="SRTSM silk production floor with reeling and winding machinery" loading="lazy" /><figcaption><span>01</span> Production floor</figcaption></figure>
-            <figure><img src={photos.silkHanks} alt="Finished silk hanks hanging at the SRTSM mill" loading="lazy" /><figcaption><span>02</span> Silk hanks</figcaption></figure>
-            <figure><img src={photos.silkBales} alt="Packed SRTSM silk bales ready for dispatch" loading="lazy" /><figcaption><span>03</span> Packed bales</figcaption></figure>
+            <figure><img src={photos.finishedSilkReels} alt="Traditional wooden reeling charkhas with precision wound raw silk" loading="lazy" /><figcaption><span>02</span> Reeled silk frames</figcaption></figure>
+            <figure><img src={photos.rawSilkLustre} alt="Lustrous pure mulberry raw silk skein bundle with natural sheen" loading="lazy" /><figcaption><span>03</span> Pure silk lustre</figcaption></figure>
+            <figure><img src={photos.silkBales} alt="Packed SRTSM silk bales ready for dispatch" loading="lazy" /><figcaption><span>04</span> Packed bales</figcaption></figure>
           </div>
           <div className="container factory__features">
             {factoryFeatures.map(([icon, title, text]) => <div key={title}><Icon name={icon as IconName} size={25} /><span><strong>{title}</strong><small>{text}</small></span></div>)}
