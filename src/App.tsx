@@ -308,7 +308,7 @@ function App() {
             </div>
             <div className="hero__visual">
               <div className="hero__image"><img src={photos.reeling} alt="SRTSM automatic silk reeling machinery" /></div>
-              <div className="hero__stamp"><strong>5A</strong><span>Premium<br />grade silk</span></div>
+              <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
               <div className="hero__caption"><span>01</span><p>Inside our automatic reeling unit in Channapatana, Karnataka.</p></div>
             </div>
           </div>
