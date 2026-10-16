@@ -304,7 +304,7 @@ function App() {
             </div>
             <div className="hero__visual">
               <div className="hero__image"><img src={photos.reeling} alt="SRTSM automatic silk reeling machinery" /></div>
-              <div className="hero__stamp"><strong>5A</strong><span>Premium<br />grade silk</span></div>
+              <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
               <div className="hero__caption"><span>01</span><p>Inside our automatic reeling unit in Channapatana, Karnataka.</p></div>
             </div>
           </div>
@@ -317,7 +317,7 @@ function App() {
               {[0, 1].map((group) => (
                 <div className="marquee__group" key={group} aria-hidden={group === 1}>
                   <span>Silk mastery since 1920</span><i /> <span>600 kg daily capacity</span><i />
-                  <span>Premium 3A · 4A · 5A</span><i /> <span>Pan-India supply</span><i />
+                  <span>Premium silk grades</span><i /> <span>Pan-India supply</span><i />
                 </div>
               ))}
             </div>
@@ -370,7 +370,7 @@ function App() {
                   <span className="product-card__type">Custom supply</span>
                   <h3>Bulk Raw<br />Silk Supply</h3>
                   <p>Customisable, mill-direct orders with dependable scheduling for manufacturers and established dealers.</p>
-                  <dl><div><dt>Minimum order</dt><dd>50 kg</dd></div><div><dt>Available grades</dt><dd>3A, 4A, 5A</dd></div><div><dt>Packaging</dt><dd>Bags, skeins, cartons</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
+                  <dl><div><dt>Minimum order</dt><dd>50 kg</dd></div><div><dt>Available grades</dt><dd>Premium silk grades tailored to buyer specifications</dd></div><div><dt>Packaging</dt><dd>Bags, skeins, cartons</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Discuss your requirement <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
