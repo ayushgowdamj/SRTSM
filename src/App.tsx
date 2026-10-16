@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
-import automaticReeling from "./assets/automatic-reeling-unit.png";
+import automaticReeling from "./assets/srtsm-reeling-line.jpg";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
 import productionFloor from "./assets/srtsm-production-floor.jpg";
 import silkBales from "./assets/srtsm-silk-bales.jpg";
