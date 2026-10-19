@@ -171,6 +171,47 @@ function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [isInstallable, setIsInstallable] = useState(false);
+  const [showInstallBanner, setShowInstallBanner] = useState(false);
+  const [isIOS, setISIOS] = useState(false);
+  const [showIOSGuide, setShowIOSGuide] = useState(false);
+
+  useEffect(() => {
+    const ua = window.navigator.userAgent.toLowerCase();
+    const isIosDevice = /iphone|ipad|ipod/.test(ua);
+    const isStandalone = window.matchMedia("(display-mode: standalone)").matches || (window.navigator as any).standalone;
+    if (isIosDevice && !isStandalone) {
+      setISIOS(true);
+    }
+    const handlePrompt = (e: any) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setIsInstallable(true);
+      setShowInstallBanner(true);
+    };
+    window.addEventListener("beforeinstallprompt", handlePrompt);
+    window.addEventListener("appinstalled", () => {
+      setIsInstallable(false);
+      setShowInstallBanner(false);
+      setDeferredPrompt(null);
+    });
+    return () => window.removeEventListener("beforeinstallprompt", handlePrompt);
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        setIsInstallable(false);
+        setShowInstallBanner(false);
+      }
+      setDeferredPrompt(null);
+    } else if (isIOS) {
+      setShowIOSGuide(true);
+    }
+  };
   const [activeYear, setActiveYear] = useState(0);
   const [submitState, setSubmitState] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -277,6 +318,12 @@ function App() {
           <a href="#top" className="nav__brand"><Logo /></a>
           <div className={`nav__links ${menuOpen ? "is-open" : ""}`}>
             {nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
+            {(isInstallable || isIOS) && (
+              <button type="button" className="button button--small install-nav-btn" onClick={handleInstallClick}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Install App
+              </button>
+            )}
             <a className="button button--small" href="#contact" onClick={() => setMenuOpen(false)}>Request a sample <Icon name="arrow" size={16} /></a>
           </div>
           <button className="nav__toggle" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
@@ -482,6 +529,36 @@ function App() {
         </div>
         <div className="container footer__bottom"><span>© {new Date().getFullYear()} Sri Ranganatha Textile Silk Mills. All rights reserved.</span><span>Channapatana · Karnataka · India</span><a href="#top">Back to top ↑</a></div>
       </footer>
+      {showInstallBanner && (
+        <aside className="pwa-install-banner" role="dialog" aria-label="Install SRTSM app">
+          <div className="pwa-install-banner__logo"><img src={srtsmLogo} alt="SRTSM Logo" /></div>
+          <div className="pwa-install-banner__info">
+            <strong>Install SRTSM Silk App</strong>
+            <small>Add to home screen for instant access with our official icon</small>
+          </div>
+          <div className="pwa-install-banner__actions">
+            <button type="button" className="button button--small" onClick={handleInstallClick}>Install</button>
+            <button type="button" className="pwa-install-banner__close" onClick={() => setShowInstallBanner(false)} aria-label="Dismiss">&times;</button>
+          </div>
+        </aside>
+      )}
+      {showIOSGuide && (
+        <div className="ios-install-modal" role="dialog" aria-modal="true">
+          <div className="ios-install-modal__backdrop" onClick={() => setShowIOSGuide(false)} />
+          <div className="ios-install-modal__content">
+            <button type="button" className="ios-install-modal__close" onClick={() => setShowIOSGuide(false)} aria-label="Close">&times;</button>
+            <div className="ios-install-modal__icon"><img src={srtsmLogo} alt="SRTSM Logo" /></div>
+            <h3>Install SRTSM on your iPhone / iPad</h3>
+            <p>Add this website to your Home Screen to use it like an app with the official SRTSM logo:</p>
+            <ol>
+              <li>Tap the <strong>Share</strong> button at the bottom of Safari.</li>
+              <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+              <li>Tap <strong>Add</strong> in the top right corner.</li>
+            </ol>
+            <button type="button" className="button" onClick={() => setShowIOSGuide(false)}>Got it</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

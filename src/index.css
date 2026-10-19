@@ -369,3 +369,188 @@ main, footer { position: relative; z-index: 1; }
   .hero__image img, .mill-arrival__image img { transform: none !important; }
   .silk-floaters { display: none; }
 }
+
+
+/* PWA App Install Elements */
+.install-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--gold-dark);
+  color: var(--white);
+  border: 1px solid var(--gold);
+  cursor: pointer;
+}
+.install-nav-btn:hover {
+  background: var(--gold);
+  color: #14120e;
+}
+
+.pwa-install-banner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgba(36, 34, 27, 0.96);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  max-width: 440px;
+  animation: pwaSlideUp 0.4s ease-out;
+}
+
+@keyframes pwaSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pwa-install-banner__logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.pwa-install-banner__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pwa-install-banner__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #fff;
+}
+
+.pwa-install-banner__info strong {
+  font-size: 13px;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+}
+
+.pwa-install-banner__info small {
+  font-size: 10px;
+  color: #a49f93;
+  line-height: 1.4;
+}
+
+.pwa-install-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.pwa-install-banner__close {
+  background: none;
+  border: none;
+  color: #8e8a81;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: color 0.2s;
+}
+
+.pwa-install-banner__close:hover {
+  color: #fff;
+}
+
+/* iOS Install Guide Modal */
+.ios-install-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.ios-install-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 16, 12, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.ios-install-modal__content {
+  position: relative;
+  z-index: 2;
+  width: min(460px, 100%);
+  padding: 34px 28px;
+  background: #24221b;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  color: #fbf9f4;
+  text-align: center;
+}
+
+.ios-install-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #aaa69d;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ios-install-modal__icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid var(--gold);
+}
+
+.ios-install-modal__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ios-install-modal__content h3 {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.ios-install-modal__content p {
+  font-size: 12px;
+  color: #c9c5bc;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.ios-install-modal__content ol {
+  text-align: left;
+  font-size: 12px;
+  color: #e2ded5;
+  line-height: 1.8;
+  margin: 0 0 24px 20px;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .pwa-install-banner {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 14px;
+  }
+}
