@@ -267,12 +267,7 @@ function App() {
 
   return (
     <div className="site-shell">
-      <div className="site-watermark" aria-hidden="true">
-        <img className="site-watermark__factory" src={photos.exterior} alt="" />
-      </div>
-      <div className="site-watermark site-watermark--logo" aria-hidden="true">
-        <img className="site-watermark__logo" src={srtsmLogo} alt="" />
-      </div>
+      <div className="scroll-progress" aria-hidden="true" />
       <div className="scroll-progress" aria-hidden="true" />
       <header className="nav-wrap">
         <nav className="nav container" aria-label="Main navigation">
