@@ -2,7 +2,7 @@
   "title": "SR Textile Silk Mills",
   "description": "Showcasing premium silk products, this platform connects dealers with customizable bulk silk supplies and tailored yarn production, ensuring quality and reliability.",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,

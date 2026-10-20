@@ -209,8 +209,13 @@ function App() {
     revealTargets.forEach((element) => revealObserver.observe(element));
 
     let ticking = false;
+    let scrollMax = 0;
+    let cachedHeight = window.innerHeight;
+    const computeMax = () => {
+      scrollMax = document.documentElement.scrollHeight - cachedHeight;
+    };
     const updateScroll = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const max = scrollMax;
       document.documentElement.style.setProperty("--scroll-progress", `${max > 0 ? (window.scrollY / max) * 100 : 0}%`);
       document.documentElement.style.setProperty("--hero-parallax", `${window.scrollY * 0.025}px`);
       document.documentElement.style.setProperty("--mill-parallax", `${(window.scrollY - 3500) * 0.018}px`);
@@ -222,11 +227,19 @@ function App() {
         ticking = true;
       }
     };
+    const onResize = () => {
+      cachedHeight = window.innerHeight;
+      computeMax();
+      updateScroll();
+    };
+    computeMax();
     updateScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
     return () => {
       revealObserver.disconnect();
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
@@ -243,7 +256,7 @@ function App() {
       const body = encodeURIComponent(
         `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\nPhone: ${formData.get("phone")}\nProduct: ${formData.get("product")}\n\n${formData.get("message")}`,
       );
-      window.location.href = `mailto:dealer@srtsm.in?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:jagadeesh_srtextile@yahoo.com?subject=${subject}&body=${body}`;
       return;
     }
 
@@ -308,7 +321,7 @@ function App() {
               </div>
             </div>
             <div className="hero__visual">
-              <div className="hero__image"><img src={photos.reeling} alt="Traditional master silk reeling by hand charkha with hot water cocoon basin" /></div>
+              <div className="hero__image"><img src="/src/assets/traditional-silk-reeling-hero.webp" srcset="/src/assets/traditional-silk-reeling-hero-320w.webp 320w, /src/assets/traditional-silk-reeling-hero-640w.webp 640w, /src/assets/traditional-silk-reeling-hero-960w.webp 960w, /src/assets/traditional-silk-reeling-hero-1200w.webp 1200w" sizes="(max-width: 768px) 90vw, (max-width: 1024px) 70vw, 600px" alt="Traditional master silk reeling by hand charkha with hot water cocoon basin" loading="eager" /></div>
               <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
               <div className="hero__caption"><span>01</span><p>Traditional charkha reeling and cocoon drafting mastery.</p></div>
             </div>
@@ -504,7 +517,7 @@ function App() {
                 <label><span>Tell us your requirement</span><textarea name="message" rows={5} placeholder="Quantity, grade, denier, packaging or delivery location..." /></label>
                 <div className="form__footer">
                   <button className="button" type="submit" disabled={submitState === "sending"}>{submitState === "sending" ? "Sending..." : "Send inquiry"} <Icon name="arrow" size={18} /></button>
-                  <p>{submitState === "sent" ? "Thank you. Our dealer team will respond shortly." : submitState === "error" ? "We could not send this. Please email dealer@srtsm.in." : "Your information stays private with us."}</p>
+                  <p>{submitState === "sent" ? "Thank you. Our dealer team will respond shortly." : submitState === "error" ? "We could not send this. Please email jagadeesh_srtextile@yahoo.com." : "Your information stays private with us."}</p>
                 </div>
               </form>
               <aside className="contact-card">
