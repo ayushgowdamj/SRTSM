@@ -171,37 +171,12 @@ function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeYear, setActiveYear] = useState(0);
-  const [submitState, setSubmitState] = useState<"idle" | "sending" | "sent" | "error">("idle");
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const ua = window.navigator.userAgent.toLowerCase();
-    const isIosDevice = /iphone|ipad|ipod/.test(ua);
-    const isStandalone = window.matchMedia("(display-mode: standalone)").matches || (window.navigator as any).standalone;
-    if (isIosDevice && !isStandalone) {
-      setISIOS(true);
-    }
-    // PWA installation logic removed per request
+    // No PWA or iOS install prompts needed
   }, []);
 
-  const handleInstallClick = async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === "accepted") {
-        setIsInstallable(false);
-        setShowInstallBanner(false);
-      }
-      setDeferredPrompt(null);
-    } else if (isIOS) {
-      setShowIOSGuide(true);
-    }
-  };
-  const [activeYear, setActiveYear] = useState(0);
-  const [submitState, setSubmitState] = useState<"idle" | "sending" | "sent" | "error">("idle");
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((entry) => {
