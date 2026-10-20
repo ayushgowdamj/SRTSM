@@ -171,12 +171,10 @@ function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeYear, setActiveYear] = useState(0);
+  const [submitState, setSubmitState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    // No PWA or iOS install prompts needed
-  }, []);
-
-  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((entry) => {
