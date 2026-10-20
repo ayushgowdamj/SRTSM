@@ -171,11 +171,9 @@ function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-  const [isInstallable, setIsInstallable] = useState(false);
-  const [showInstallBanner, setShowInstallBanner] = useState(false);
-  const [isIOS, setISIOS] = useState(false);
-  const [showIOSGuide, setShowIOSGuide] = useState(false);
+  const [activeYear, setActiveYear] = useState(0);
+  const [submitState, setSubmitState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const ua = window.navigator.userAgent.toLowerCase();
@@ -184,19 +182,7 @@ function App() {
     if (isIosDevice && !isStandalone) {
       setISIOS(true);
     }
-    const handlePrompt = (e: any) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
-      setIsInstallable(true);
-      setShowInstallBanner(true);
-    };
-    window.addEventListener("beforeinstallprompt", handlePrompt);
-    window.addEventListener("appinstalled", () => {
-      setIsInstallable(false);
-      setShowInstallBanner(false);
-      setDeferredPrompt(null);
-    });
-    return () => window.removeEventListener("beforeinstallprompt", handlePrompt);
+    // PWA installation logic removed per request
   }, []);
 
   const handleInstallClick = async () => {
@@ -318,13 +304,7 @@ function App() {
           <a href="#top" className="nav__brand"><Logo /></a>
           <div className={`nav__links ${menuOpen ? "is-open" : ""}`}>
             {nav.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
-            {(isInstallable || isIOS) && (
-              <button type="button" className="button button--small install-nav-btn" onClick={handleInstallClick}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Install App
-              </button>
-            )}
-            <a className="button button--small" href="#contact" onClick={() => setMenuOpen(false)}>Request a sample <Icon name="arrow" size={16} /></a>
+                        <a className="button button--small" href="#contact" onClick={() => setMenuOpen(false)}>Request a sample <Icon name="arrow" size={16} /></a>
           </div>
           <button className="nav__toggle" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
             <Icon name={menuOpen ? "close" : "menu"} size={25} />
@@ -411,7 +391,7 @@ function App() {
                   <span className="product-card__type">Dealer catalogue</span>
                   <h3>Raw Silk Yarn</h3>
                   <p>Premium mulberry silk with high filament length for power looms, hand looms, rapier loom and high-end weaving.</p>
-                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D, 50–70 D, 100–120 D, 150–200 D, 600–650 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>20-22 D, 24-26 D, 30-34 D, 40-44 D, 600-650 D</dd></div><div><dt>Packaging</dt><dd>5 kg / 10 kg</dd></div></dl>
+                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D, 50–70 D, 100–120 D, 150–200 D, 600–650 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>20-22 D, 24-26 D, 30-34 D, 40-44 D, 600-650 D</dd></div><div><dt>Packaging</dt><dd>5 kg / 10 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Inquire for bulk supply <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
@@ -490,7 +470,7 @@ function App() {
                 </div>
                 <div className="field-row">
                   <label><span>Phone number *</span><input name="phone" type="tel" required placeholder="+91" /></label>
-                  <label><span>Product of interest *</span><select name="product" required defaultValue=""><option value="" disabled>Select a product</option><option>Raw Silk Yarn & Thread</option><option>Bulk Raw Silk Supply</option><option>Sample Request</option></select></label>
+                  <label><span>Product of interest *</span><select name="product" required defaultValue=""><option value="" disabled>Select a product</option><option>Raw Silk Yarn</option><option>Bulk Raw Silk Supply</option><option>Sample Request</option></select></label>
                 </div>
                 <label><span>Tell us your requirement</span><textarea name="message" rows={5} placeholder="Quantity, grade, denier, packaging or delivery location..." /></label>
                 <div className="form__footer">
@@ -525,41 +505,11 @@ function App() {
           <div><Logo light /><p>Silk mastery. Dealer trust.<br />Since 1920.</p></div>
           <div className="footer__links"><strong>Explore</strong>{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
           <div className="footer__links"><strong>Products</strong><a href="#products">Raw silk yarn</a><a href="#products">Bulk silk supply</a><a href="#contact">Sample requests</a></div>
-          <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:dealer@srtsm.in">dealer@srtsm.in</a><div><a href="#" aria-label="Instagram"><Icon name="instagram" /></a><a href="#" aria-label="Facebook"><Icon name="facebook" /></a><a href="#" aria-label="LinkedIn"><Icon name="linkedin" /></a></div></div>
+          <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:dealer@srtsm.in">dealer@srtsm.in</a></div>
         </div>
         <div className="container footer__bottom"><span>© {new Date().getFullYear()} Sri Ranganatha Textile Silk Mills. All rights reserved.</span><span>Channapatana · Karnataka · India</span><a href="#top">Back to top ↑</a></div>
       </footer>
-      {showInstallBanner && (
-        <aside className="pwa-install-banner" role="dialog" aria-label="Install SRTSM app">
-          <div className="pwa-install-banner__logo"><img src={srtsmLogo} alt="SRTSM Logo" /></div>
-          <div className="pwa-install-banner__info">
-            <strong>Install SRTSM Silk App</strong>
-            <small>Add to home screen for instant access with our official icon</small>
-          </div>
-          <div className="pwa-install-banner__actions">
-            <button type="button" className="button button--small" onClick={handleInstallClick}>Install</button>
-            <button type="button" className="pwa-install-banner__close" onClick={() => setShowInstallBanner(false)} aria-label="Dismiss">&times;</button>
-          </div>
-        </aside>
-      )}
-      {showIOSGuide && (
-        <div className="ios-install-modal" role="dialog" aria-modal="true">
-          <div className="ios-install-modal__backdrop" onClick={() => setShowIOSGuide(false)} />
-          <div className="ios-install-modal__content">
-            <button type="button" className="ios-install-modal__close" onClick={() => setShowIOSGuide(false)} aria-label="Close">&times;</button>
-            <div className="ios-install-modal__icon"><img src={srtsmLogo} alt="SRTSM Logo" /></div>
-            <h3>Install SRTSM on your iPhone / iPad</h3>
-            <p>Add this website to your Home Screen to use it like an app with the official SRTSM logo:</p>
-            <ol>
-              <li>Tap the <strong>Share</strong> button at the bottom of Safari.</li>
-              <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
-              <li>Tap <strong>Add</strong> in the top right corner.</li>
-            </ol>
-            <button type="button" className="button" onClick={() => setShowIOSGuide(false)}>Got it</button>
-          </div>
-        </div>
-      )}
-    </div>
+                </div>
   );
 }
 
