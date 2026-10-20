@@ -430,7 +430,7 @@ function App() {
           <div className="container">
             <div className="contact__header">
               <SectionTitle eyebrow="Start a conversation" title="Your next supply begins here." intro="Tell us what your loom needs. Our dealer team will get back with availability, specifications and pricing." />
-              <div className="contact__direct"><span>Prefer to speak directly?</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+              <div className="contact__direct"><span>Prefer to speak directly?</span><a href="tel:+919980921696">+91 9980921696</a></div>
             </div>
             <div className="contact__grid">
               <form className="inquiry-form" onSubmit={handleSubmit}>
@@ -456,8 +456,8 @@ function App() {
                   <p>#381, Genedmadu, Yelekeri,<br />Channapatana Town, Ramanagara – 562160,<br />Karnataka, India</p>
                 </div>
                 <div className="contact-card__details">
-                  <a href="tel:+919876543210"><Icon name="phone" /><span>+91 98765 43210<br />+91 80123 45678</span></a>
-                  <a href="mailto:info@srtsm.in"><Icon name="mail" /><span>info@srtsm.in<br />dealer@srtsm.in</span></a>
+                  <a href="tel:+919980921696"><Icon name="phone" /><span>+91 9980921696<br />+91 80123 45678</span></a>
+                  <a href="mailto:jagadeesh_srtextile@yahoo.com"><Icon name="mail" /><span>jagadeesh_srtextile@yahoo.com<br />jagadeesh_srtextile@yahoo.com</span></a>
                   <div><Icon name="clock" /><span>Mon–Sat: 9:00 AM–6:00 PM<br />Sunday: Closed</span></div>
                 </div>
               </aside>
