@@ -342,7 +342,7 @@ function App() {
             <div className="hero__content">
               <span className="eyebrow">Silk mastery since 1920</span>
               <h1>Silk, perfected<br /><em>over generations.</em></h1>
-              <p>Premium raw silk yarn, reeled in Karnataka and supplied with confidence to dealers and manufacturers across India.</p>
+              <p>Premium raw silk yarn, reeled in Karnataka and supplied with confidence to textile manufacturers and dealers across India.</p>
               <div className="hero__actions">
                 <a href="#contact" className="button">Inquire for bulk supply <Icon name="arrow" size={18} /></a>
                 <a href="#products" className="text-link">Explore our products <span>↓</span></a>
@@ -403,7 +403,7 @@ function App() {
 
         <section id="products" className="products section">
           <div className="container">
-            <SectionTitle eyebrow="Our offerings" title="Silk engineered for your loom." intro="Consistent raw material, flexible specifications, and a reliable supply partner for dealers and textile manufacturers." />
+            <SectionTitle eyebrow="Our offerings" title="Silk engineered for your loom." intro="Consistent raw material, flexible specifications, and a reliable supply partner for textile manufacturers and dealers." />
             <div className="product-grid">
               <article className="product-card">
                 <div className="product-card__image"><img src={photos.rawSilkLustre} alt="Finished SRTSM raw silk hanks ready for weaving" loading="lazy" /><span>01</span></div>
@@ -420,7 +420,7 @@ function App() {
                 <div className="product-card__body">
                   <span className="product-card__type">Custom supply</span>
                   <h3>Bulk Raw<br />Silk Supply</h3>
-                  <p>Customisable, mill-direct orders with dependable scheduling for manufacturers and established dealers.</p>
+                  <p>Customisable, mill-direct orders with dependable scheduling for textile manufacturers and established dealers.</p>
                   <dl><div><dt>Minimum order</dt><dd>50 kg</dd></div><div><dt>Available grades</dt><dd>Premium silk grades tailored to buyer specifications</dd></div><div><dt>Packaging</dt><dd>Bags, skeins, cartons</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Discuss your requirement <Icon name="arrow" size={18} /></a>
                 </div>
