@@ -1,4 +1,5 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
+import traditionalSilkReeling from "./assets/traditional-silk-reeling-hero.png";
 import automaticReeling from "./assets/srtsm-reeling-line.jpg";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
 import productionFloor from "./assets/srtsm-production-floor.jpg";
@@ -9,7 +10,8 @@ import finishedSilkReels from "./assets/finished-silk-reels.jpg";
 import rawSilkLustre from "./assets/raw-silk-lustre.jpg";
 
 const photos = {
-  reeling: automaticReeling,
+  reeling: traditionalSilkReeling,
+  automaticReelingLine: automaticReeling,
   exterior: factoryExterior,
   productionFloor,
   silkHanks,
@@ -307,9 +309,9 @@ function App() {
               </div>
             </div>
             <div className="hero__visual">
-              <div className="hero__image"><img src={photos.reeling} alt="SRTSM automatic silk reeling machinery" /></div>
+              <div className="hero__image"><img src={photos.reeling} alt="Traditional master silk reeling by hand charkha with hot water cocoon basin" /></div>
               <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
-              <div className="hero__caption"><span>01</span><p>Inside our automatic reeling unit in Channapatana, Karnataka.</p></div>
+              <div className="hero__caption"><span>01</span><p>Traditional charkha reeling and cocoon drafting mastery.</p></div>
             </div>
           </div>
           <div className="hero__side-label">Channapatana · Karnataka · India</div>
