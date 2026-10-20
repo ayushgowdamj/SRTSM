@@ -27,7 +27,7 @@ const milestones = [
   {
     year: "1928",
     title: "Entering Silk Reeling",
-    text: "In 1930, the business took an important step forward by entering the silk reeling industry. Silk reeling was started on a very small scale using traditional methods through a cottage filature and hand charkha. This marked the beginning of SR Textile Silk Mills' journey into silk manufacturing. What started as a small traditional operation was built on hard work, skilled craftsmanship, and a strong commitment to producing quality silk.",
+    text: "In 1928, the business took an important step forward by entering the silk reeling industry. Silk reeling was started on a very small scale using traditional methods through a hand charkha and cottage filature. This marked the beginning of SR Textile Silk Mills' journey into silk manufacturing. What started as a small traditional operation was built on hard work, skilled craftsmanship, and a strong commitment to producing quality silk.",
   },
   {
     year: "1960",
@@ -36,8 +36,8 @@ const milestones = [
   },
   {
     year: "1983",
-    title: "The Third Generation – A New Chapter",
-    text: "In 1983, the third generation entered the business, with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system was gradually transformed, and advanced Multi-End Silk Filatures were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
+    title: "The Third Generation A New Chapter",
+    text: "In 1983, the third generation entered the business. with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system and cottage filature , was gradually transformed, to advanced Multi-End Silk Filatures and Japanese Semi Automatic machines  were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
   },
   {
     year: "Modern Era",
@@ -409,9 +409,9 @@ function App() {
                 <div className="product-card__image"><img src={photos.rawSilkLustre} alt="Finished SRTSM raw silk hanks ready for weaving" loading="lazy" /><span>01</span></div>
                 <div className="product-card__body">
                   <span className="product-card__type">Dealer catalogue</span>
-                  <h3>Raw Silk Yarn<br />& Thread</h3>
-                  <p>Premium mulberry silk with high filament length for power looms, hand looms and high-end weaving.</p>
-                  <dl><div><dt>Denier</dt><dd>20–100 D</dd></div><div><dt>Twist</dt><dd>200–300 TPI</dd></div><div><dt>Moisture regain</dt><dd>≤ 11%</dd></div><div><dt>Packaging</dt><dd>5 kg / 10 kg</dd></div></dl>
+                  <h3>Raw Silk Yarn</h3>
+                  <p>Premium mulberry silk with high filament length for power looms, hand looms, rapier loom and high-end weaving.</p>
+                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D, 50–70 D, 100–120 D, 150–200 D, 600–650 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>20-22 D, 24-26 D, 30-34 D, 40-44 D, 600-650 D</dd></div><div><dt>Packaging</dt><dd>5 kg / 10 kg</dd></div></dl>
                   <a href="#contact" className="card-link">Inquire for bulk supply <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
