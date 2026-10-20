@@ -457,8 +457,8 @@ function App() {
                 </div>
                 <div className="contact-card__details">
                   <a href="tel:+919980921696"><Icon name="phone" /><span>+91 9980921696<br />+91 80123 45678</span></a>
-                  <a href="mailto:jagadeesh_srtextile@yahoo.com"><Icon name="mail" /><span>jagadeesh_srtextile@yahoo.com<br />jagadeesh_srtextile@yahoo.com</span></a>
-                  <div><Icon name="clock" /><span>Mon–Sat: 9:00 AM–6:00 PM<br />Sunday: Closed</span></div>
+                  <a href="mailto:jagadeesh_srtextile@yahoo.com"><Icon name="mail" /><span>jagadeesh_srtextile@yahoo.com</span></a>
+                  <div><Icon name="clock" /><span>24 hrs<br />Sunday: Holiday</span></div>
                 </div>
               </aside>
             </div>
@@ -475,7 +475,7 @@ function App() {
           <div><Logo light /><p>Silk mastery. Dealer trust.<br />Since 1920.</p></div>
           <div className="footer__links"><strong>Explore</strong>{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
           <div className="footer__links"><strong>Products</strong><a href="#products">Raw silk yarn</a><a href="#products">Bulk silk supply</a><a href="#contact">Sample requests</a></div>
-          <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:dealer@srtsm.in">dealer@srtsm.in</a></div>
+          <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:jagadeesh_srtextile@yahoo.com">jagadeesh_srtextile@yahoo.com</a></div>
         </div>
         <div className="container footer__bottom"><span>© {new Date().getFullYear()} Sri Ranganatha Textile Silk Mills. All rights reserved.</span><span>Channapatana · Karnataka · India</span><a href="#top">Back to top ↑</a></div>
       </footer>
