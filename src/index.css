@@ -556,3 +556,107 @@ main, footer { position: relative; z-index: 1; }
 }
 
 
+
+/* ============================================================
+   PHOTO GALLERY SECTION
+   ============================================================ */
+.photo-gallery { background: var(--ink); color: var(--white); }
+
+.section-label-row { margin-bottom: 52px; }
+.section-label-row .eyebrow { margin-bottom: 16px; }
+
+.gallery-heading {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  color: var(--white);
+  max-width: 700px;
+}
+.gallery-heading em { color: #ecd582; font-style: italic; font-weight: inherit; }
+
+.photo-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Make the last item span 2 columns when there are 4 items (3+1) */
+.photo-gallery__item:last-child:nth-child(3n+1) {
+  grid-column: 2 / 3;
+}
+
+.photo-gallery__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.photo-gallery__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.photo-gallery__img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.photo-gallery__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.photo-gallery__item:hover .photo-gallery__img-wrap img {
+  transform: scale(1.06);
+}
+
+.photo-gallery__item figcaption {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.photo-gallery__item figcaption strong {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 600;
+  color: #ecd582;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+}
+
+.photo-gallery__item figcaption p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,.65);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.photo-gallery__note {
+  text-align: center;
+  margin-top: 44px;
+  font-size: 14px;
+  color: rgba(255,255,255,.38);
+  letter-spacing: .04em;
+}
+
+@media (max-width: 900px) {
+  .photo-gallery__grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .photo-gallery__item:last-child:nth-child(3n+1) { grid-column: auto; }
+}
+
+@media (max-width: 560px) {
+  .photo-gallery__grid { grid-template-columns: 1fr; gap: 16px; }
+  .gallery-heading { font-size: 32px; }
+}

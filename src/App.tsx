@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useRef, useState } from "react";
+﻿import { FormEvent, useEffect, useRef, useState } from "react";
 import traditionalSilkReeling from "./assets/traditional-silk-reeling-hero.png";
 import automaticReeling from "./assets/srtsm-reeling-line.jpg";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
@@ -8,6 +8,10 @@ import silkHanks from "./assets/srtsm-silk-hanks.jpg";
 import srtsmLogo from "./assets/srtsm-logo.png";
 import finishedSilkReels from "./assets/finished-silk-reels.jpg";
 import rawSilkLustre from "./assets/raw-silk-lustre.jpg";
+import srtsmAutoReelingLine from "./assets/srtsm_auto_reeling_line.jpg";
+import srtsmMultiEndReeling from "./assets/srtsm_multi_end_reeling.jpg";
+import srtsmSilkReelsWarehouse from "./assets/srtsm_silk_reels_warehouse.jpg";
+import srtsmSilkBalesStack from "./assets/srtsm_silk_bales_stack.jpg";
 
 const photos = {
   reeling: traditionalSilkReeling,
@@ -423,6 +427,61 @@ function App() {
           </div>
           <div className="container factory__features">
             {factoryFeatures.map(([icon, title, text]) => <div key={title}><Icon name={icon as IconName} size={25} /><span><strong>{title}</strong><small>{text}</small></span></div>)}
+          </div>
+        </section>
+
+
+        {/* ─────── PHOTO GALLERY ─────── */}
+        <section className="photo-gallery section" aria-label="SRTSM Factory Photo Gallery">
+          <div className="container">
+            <div className="section-label-row">
+              <span className="eyebrow">Our Facility</span>
+              <h2 className="gallery-heading">A glimpse inside<br /><em>Sri Ranganatha Textile Silk Mills</em></h2>
+            </div>
+            <div className="photo-gallery__grid">
+
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={srtsmAutoReelingLine} alt="SRTSM automated reeling line with green silk reeling drums" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Automated Silk Reeling Line</strong>
+                  <p>Our state-of-the-art automatic reeling machines extract fine silk threads from cocoons with precision and consistency, ensuring uniform denier across every reel.</p>
+                </figcaption>
+              </figure>
+
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={srtsmMultiEndReeling} alt="SRTSM multi-end reeling machines on the factory floor" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Multi-End Reeling Machines</strong>
+                  <p>Our multi-end reeling floor houses precision machines that simultaneously reel silk from multiple cocoons, dramatically increasing throughput without compromising quality.</p>
+                </figcaption>
+              </figure>
+
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={srtsmSilkReelsWarehouse} alt="Wooden silk reel frames stacked in SRTSM warehouse" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Reeled Silk Ready for Dispatch</strong>
+                  <p>Freshly reeled raw silk wound onto traditional wooden cross-reel frames, organized and ready for quality inspection before packing and dispatch to dealers.</p>
+                </figcaption>
+              </figure>
+
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={srtsmSilkBalesStack} alt="Stacked SRTSM bulk raw silk bales in warehouse" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Bulk Raw Silk Bales</strong>
+                  <p>Tightly packed and labeled raw silk bales stacked in our dispatch warehouse, ready for bulk delivery to weavers, dealers, and exporters across India.</p>
+                </figcaption>
+              </figure>
+
+            </div>
+            <p className="photo-gallery__note">More photos coming soon. Send us an inquiry to schedule a factory visit.</p>
           </div>
         </section>
 
