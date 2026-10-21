@@ -15,7 +15,7 @@ import srtsmSilkReelsWarehouse from "./assets/srtsm_silk_reels_warehouse.jpg";
 import srtsmSilkBalesStack from "./assets/srtsm_silk_bales_stack.jpg";
 
 const photos = {
-  reeling: traditionalSilkReeling,
+  reeling: silkReelingArtisan,
   automaticReelingLine: automaticReeling,
   exterior: factoryExterior,
   productionFloor,
