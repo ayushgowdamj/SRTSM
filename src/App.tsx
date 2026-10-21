@@ -533,7 +533,7 @@ function App() {
                   <p>#381, Genedmadu, Yelekeri,<br />Channapatana Town, Ramanagara – 562160,<br />Karnataka, India</p>
                 </div>
                 <div className="contact-card__details">
-                  <a href="tel:+919980921696"><Icon name="phone" /><span>+91 9980921696<br />+91 80123 45678</span></a>
+                  <a href="tel:+919980921696"><Icon name="phone" /><span>+91 9980921696<br />+91 9008782714</span></a>
                   <a href="mailto:jagadeesh_srtextile@yahoo.com"><Icon name="mail" /><span>jagadeesh_srtextile@yahoo.com</span></a>
                   <div><Icon name="clock" /><span>Working Hours - 24hrs<br />Sunday: Holiday</span></div>
                 </div>
