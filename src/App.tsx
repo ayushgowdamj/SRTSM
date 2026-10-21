@@ -43,7 +43,7 @@ const milestones = [
   {
     year: "1983",
     title: "The Third Generation A New Chapter",
-    text: "In 1983, the third generation entered the business. with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system and cottage filature , was gradually transformed, to advanced Multi-End Silk Filatures and Japanese Semi Automatic machines  were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
+    text: "In 1983, the third generation entered the business. with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system and cottage filature , was gradually transformed, to advanced Multi‑End Silk Filatures and Japanese Semi Automatic machines  were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
   },
   {
     year: "Modern Era",
@@ -252,7 +252,7 @@ function App() {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      const subject = encodeURIComponent(`Bulk silk inquiry from ${formData.get("name")}`);
+      const subject = encodeURIComponent(`silk inquiry from ${formData.get("name")}`);
       const body = encodeURIComponent(
         `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\nPhone: ${formData.get("phone")}\nProduct: ${formData.get("product")}\n\n${formData.get("message")}`,
       );
@@ -311,7 +311,7 @@ function App() {
               <h1>Silk, perfected<br /><em>over generations.</em></h1>
               <p>Premium raw silk yarn, reeled in Karnataka and supplied with confidence to textile manufacturers and dealers across India.</p>
               <div className="hero__actions">
-                <a href="#contact" className="button">Inquire for bulk supply <Icon name="arrow" size={18} /></a>
+                <a href="#contact" className="button">Inquire for supply <Icon name="arrow" size={18} /></a>
                 <a href="#products" className="text-link">Explore our products <span>↓</span></a>
               </div>
               <div className="hero__stats">
@@ -379,14 +379,14 @@ function App() {
                   <h3>Raw Silk Yarn</h3>
                   <p>Premium mulberry silk with high filament length for power looms, hand looms, rapier loom and high-end weaving.</p>
                   <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D, 50–70 D, 100–120 D, 150–200 D, 600–650 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>18-20 D, 20-22 D, 27-29 D, 36-40 D, 40-44 D, 100-120 D</dd></div><div><dt>Packaging</dt><dd>5 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
-                  <a href="#contact" className="card-link">Inquire for bulk supply <Icon name="arrow" size={18} /></a>
+                  <a href="#contact" className="card-link">Inquire for supply <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
               <article className="product-card product-card--reverse">
-                <div className="product-card__image"><img src={photos.silkBales} alt="Graded SRTSM silk bales packed for bulk dealer supply" loading="lazy" /><span>02</span></div>
+                <div className="product-card__image"><img src={photos.silkBales} alt="Graded SRTSM silk bales packed for dealer supply" loading="lazy" /><span>02</span></div>
                 <div className="product-card__body">
                   <span className="product-card__type">Custom supply</span>
-                  <h3>Bulk Raw<br />Silk Supply</h3>
+                  <h3>Raw<br />Silk Supply</h3>
                   <p>Customisable, mill-direct orders with dependable scheduling for textile manufacturers and established dealers.</p>
                   <dl><div><dt>Minimum order</dt><dd>50 kg</dd></div><div><dt>Available grades</dt><dd>Premium silk grades tailored to buyer specifications</dd></div><div><dt>Packaging</dt><dd>Bags, skeins, cartons</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Discuss your requirement <Icon name="arrow" size={18} /></a>
@@ -455,7 +455,7 @@ function App() {
 
               <figure className="photo-gallery__item">
                 <div className="photo-gallery__img-wrap">
-                  <img src={srtsmAutoReelingLine} alt="SRTSM automated reeling line with green silk reeling drums" loading="lazy" />
+                  <img src={srtsmAutoReelingLine} alt="SRTSM silk re‑reeling line with green silk reeling drums" loading="lazy" />
                 </div>
                 <figcaption>
                   <strong>Automated Silk Reeling Line</strong>
@@ -468,7 +468,7 @@ function App() {
                   <img src={srtsmMultiEndReeling} alt="SRTSM multi-end reeling machines on the factory floor" loading="lazy" />
                 </div>
                 <figcaption>
-                  <strong>Multi-End Reeling Machines</strong>
+                  <strong>Automatic Reeling Machine</strong>
                   <p>Our multi-end reeling floor houses precision machines that simultaneously reel silk from multiple cocoons, dramatically increasing throughput without compromising quality.</p>
                 </figcaption>
               </figure>
@@ -478,17 +478,17 @@ function App() {
                   <img src={srtsmSilkReelsWarehouse} alt="Wooden silk reel frames stacked in SRTSM warehouse" loading="lazy" />
                 </div>
                 <figcaption>
-                  <strong>Reeled Silk Ready for Dispatch</strong>
+                  <strong>Re‑reeled Silk in Frames</strong>
                   <p>Freshly reeled raw silk wound onto traditional wooden cross-reel frames, organized and ready for quality inspection before packing and dispatch to dealers.</p>
                 </figcaption>
               </figure>
 
               <figure className="photo-gallery__item">
                 <div className="photo-gallery__img-wrap">
-                  <img src={srtsmSilkBalesStack} alt="Stacked SRTSM bulk raw silk bales in warehouse" loading="lazy" />
+                  <img src={srtsmSilkBalesStack} alt="Stacked SRTSM silk bales in warehouse" loading="lazy" />
                 </div>
                 <figcaption>
-                  <strong>Bulk Raw Silk Bales</strong>
+                  <strong>Raw Silk Bales</strong>
                   <p>Tightly packed and labeled raw silk bales stacked in our dispatch warehouse, ready for bulk delivery to weavers, dealers, and exporters across India.</p>
                 </figcaption>
               </figure>
@@ -512,7 +512,7 @@ function App() {
                 </div>
                 <div className="field-row">
                   <label><span>Phone number *</span><input name="phone" type="tel" required placeholder="+91" /></label>
-                  <label><span>Product of interest *</span><select name="product" required defaultValue=""><option value="" disabled>Select a product</option><option>Raw Silk Yarn</option><option>Bulk Raw Silk Supply</option><option>Sample Request</option></select></label>
+                  <label><span>Product of interest *</span><select name="product" required defaultValue=""><option value="" disabled>Select a product</option><option>Raw Silk Yarn</option><option>Raw Silk Supply</option><option>Sample Request</option></select></label>
                 </div>
                 <label><span>Tell us your requirement</span><textarea name="message" rows={5} placeholder="Quantity, grade, denier, packaging or delivery location..." /></label>
                 <div className="form__footer">
@@ -546,7 +546,7 @@ function App() {
         <div className="container footer__top">
           <div><Logo light /><p>Silk mastery. Dealer trust.<br />Since 1920.</p></div>
           <div className="footer__links"><strong>Explore</strong>{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
-          <div className="footer__links"><strong>Products</strong><a href="#products">Raw silk yarn</a><a href="#products">Bulk silk supply</a><a href="#contact">Sample requests</a></div>
+          <div className="footer__links"><strong>Products</strong><a href="#products">Raw silk yarn</a><a href="#products">silk supply</a><a href="#contact">Sample requests</a></div>
           <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:jagadeesh_srtextile@yahoo.com">jagadeesh_srtextile@yahoo.com</a></div>
         </div>
         <div className="container footer__bottom"><span>© {new Date().getFullYear()} Sri Ranganatha Textile Silk Mills. All rights reserved.</span><span>Channapatana · Karnataka · India</span><a href="#top">Back to top ↑</a></div>
