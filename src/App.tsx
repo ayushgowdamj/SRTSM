@@ -427,29 +427,12 @@ function App() {
           <span className="mill-arrival__word">SRTSM</span>
         </section>
 
-        <section id="factory" className="factory section">
-          <div className="container factory__heading">
-            <SectionTitle eyebrow="Inside our mill" title="Where heritage meets precision." intro="Our Channapatana facility combines generations of reeling expertise with automated production and rigorous in-house quality control." />
-            <p className="factory__aside">Every batch is watched, measured and documented—because consistency at the mill means confidence at the loom.</p>
-          </div>
-          <div className="factory__gallery">
-            <figure className="factory__main"><img src={photos.productionFloor} alt="SRTSM silk production floor with reeling and winding machinery" loading="lazy" /><figcaption><span>01</span> Production floor</figcaption></figure>
-            <figure><img src={photos.finishedSilkReels} alt="Traditional wooden reeling charkhas with precision wound raw silk" loading="lazy" /><figcaption><span>02</span> Reeled silk frames</figcaption></figure>
-            <figure><img src={photos.rawSilkLustre} alt="Lustrous pure mulberry raw silk skein bundle with natural sheen" loading="lazy" /><figcaption><span>03</span> Pure silk lustre</figcaption></figure>
-            <figure><img src={photos.silkBales} alt="Packed SRTSM silk bales ready for dispatch" loading="lazy" /><figcaption><span>04</span> Packed bales</figcaption></figure>
-          </div>
-          <div className="container factory__features">
-            {factoryFeatures.map(([icon, title, text]) => <div key={title}><Icon name={icon as IconName} size={25} /><span><strong>{title}</strong><small>{text}</small></span></div>)}
-          </div>
-        </section>
-
-
-        {/* ─────── PHOTO GALLERY ─────── */}
-        <section className="photo-gallery section" aria-label="SRTSM Factory Photo Gallery">
+        <section id="factory" className="photo-gallery section" aria-label="Inside our mill">
           <div className="container">
             <div className="section-label-row">
-              <span className="eyebrow">Our Facility</span>
-              <h2 className="gallery-heading">A glimpse inside<br /><em>Sri Ranganatha Textile Silk Mills</em></h2>
+              <span className="eyebrow">Inside our mill</span>
+              <h2 className="gallery-heading">Where heritage meets<br /><em>precision.</em></h2>
+              <p className="gallery-intro">Our Channapatana facility combines generations of reeling expertise with automated production and rigorous in-house quality control. Every batch is watched, measured and documented—because consistency at the mill means confidence at the loom.</p>
             </div>
             <div className="photo-gallery__grid">
 
@@ -493,8 +476,30 @@ function App() {
                 </figcaption>
               </figure>
 
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={silkHanks} alt="Fine white silk hanks hanging in the mill, ready for inspection" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Silk Hanks, Carefully Prepared</strong>
+                  <p>Soft, even hanks showcase the natural brightness and fine texture of our reeled silk, prepared for careful grading and handling.</p>
+                </figcaption>
+              </figure>
+
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={rawSilkLustre} alt="Glossy strands of pure raw silk gathered in a wooden tray" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Natural Silk Lustre</strong>
+                  <p>A close look at the smooth, luminous filaments that give quality mulberry silk its distinctive softness and sheen.</p>
+                </figcaption>
+              </figure>
+
             </div>
-            <p className="photo-gallery__note">More photos coming soon. Send us an inquiry to schedule a factory visit.</p>
+            <div className="factory__features">
+              {factoryFeatures.map(([icon, title, text]) => <div key={title}><Icon name={icon as IconName} size={25} /><span><strong>{title}</strong><small>{text}</small></span></div>)}
+            </div>
           </div>
         </section>
 
