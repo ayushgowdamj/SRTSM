@@ -1,6 +1,5 @@
 ﻿import { FormEvent, useEffect, useRef, useState } from "react";
-// Mulberry silk cocoon processing photo from Muezart's silk yarn guide.
-import mulberrySilkReeling from "./assets/mulberry-silk-cocoon-processing.jpg";
+import mulberrySilkReeling from "./assets/golden-silk-reeling-workshop.png";
 import automaticReeling from "./assets/srtsm-reeling-line.jpg";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
 import productionFloor from "./assets/srtsm-production-floor.jpg";
