@@ -1,6 +1,6 @@
 ﻿import { FormEvent, useEffect, useRef, useState } from "react";
-// Photo by Quang Nguyen Vinh via Pexels: https://www.pexels.com/photo/woman-in-workshop-6876947/
-import silkReelingArtisan from "./assets/silk-reeling-artisan-pexels-optimized.jpg";
+// Mulberry silk cocoon processing photo from Muezart's silk yarn guide.
+import mulberrySilkReeling from "./assets/mulberry-silk-cocoon-processing.jpg";
 import automaticReeling from "./assets/srtsm-reeling-line.jpg";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
 import productionFloor from "./assets/srtsm-production-floor.jpg";
@@ -15,7 +15,7 @@ import srtsmSilkReelsWarehouse from "./assets/srtsm_silk_reels_warehouse.jpg";
 import srtsmSilkBalesStack from "./assets/srtsm_silk_bales_stack.jpg";
 
 const photos = {
-  reeling: silkReelingArtisan,
+  reeling: mulberrySilkReeling,
   automaticReelingLine: automaticReeling,
   exterior: factoryExterior,
   productionFloor,
@@ -322,9 +322,9 @@ function App() {
               </div>
             </div>
             <div className="hero__visual">
-              <div className="hero__image"><img src={silkReelingArtisan} alt="Artisan carefully handling silk skeins in a traditional workshop" loading="eager" /></div>
+              <div className="hero__image"><img src={mulberrySilkReeling} alt="Traditional hand reeling of white mulberry silk from cocoons in a warm-water basin" loading="eager" /></div>
               <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
-              <div className="hero__caption"><span>01</span><p>Careful hands, delicate fibres and generations of textile craftsmanship.</p></div>
+              <div className="hero__caption"><span>01</span><p>Fine mulberry silk is drawn from white cocoons and guided onto a hand-turned reel.</p></div>
             </div>
           </div>
           <div className="hero__side-label">Channapatana · Karnataka · India</div>
