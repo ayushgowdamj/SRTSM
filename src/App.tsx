@@ -57,7 +57,7 @@ const advantages = [
   ["shield", "Quality Assurance", "In-house, ISO-aligned testing protects denier, twist, moisture and grade consistency."],
   ["people", "Dealer-First Partnership", "Responsive support, transparent communication and flexible long-term contracts."],
   ["tag", "Decades of Trust", "With over a century of silk heritage, we have built lasting relationships founded on integrity, consistency, and an unwavering commitment to quality."],
-  ["truck", "Pan-India Logistics", "Dependable dispatch to major silk hubs including Varanasi, Surat and Bengaluru."],
+  ["truck", "Pan-India Logistics", "Dependable dispatch throughout India."],
   ["flask", "Samples & Consultation", "Expert guidance and evaluated samples before you commit to a larger order."],
 ];
 
