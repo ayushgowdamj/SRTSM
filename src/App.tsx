@@ -1,21 +1,17 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import automaticReeling from "./assets/automatic-reeling-unit.png";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
-import productionFloor from "./assets/srtsm-production-floor.jpg";
 import silkBales from "./assets/srtsm-silk-bales.jpg";
-import silkFibres from "./assets/srtsm-silk-fibres.png";
 import silkHanks from "./assets/srtsm-silk-hanks.jpg";
 import srtsmLogo from "./assets/srtsm-logo.png";
-import warehouseRacks from "./assets/srtsm-warehouse-racks.png";
+import silkWindingFloor from "./assets/silk-winding-floor.png";
 
 const photos = {
   reeling: automaticReeling,
   exterior: factoryExterior,
-  productionFloor,
   silkHanks,
   silkBales,
-  warehouseRacks,
-  silkFibres,
+  silkWindingFloor,
 };
 
 const milestones = [
@@ -53,13 +49,6 @@ const advantages = [
   ["tag", "Decades of Trust", "With over a century of silk heritage, we have built lasting relationships founded on integrity, consistency, and an unwavering commitment to quality."],
   ["truck", "Pan-India Logistics", "Dependable dispatch to major silk hubs including Varanasi, Surat and Bengaluru."],
   ["flask", "Samples & Consultation", "Expert guidance and evaluated samples before you commit to a bulk order."],
-];
-
-const factoryFeatures = [
-  ["gear", "Automatic Reeling", "Modern multi-end systems"],
-  ["flask", "In-house QC Lab", "Batch-level grade testing"],
-  ["pin", "Karnataka Location", "At the heart of silk country"],
-  ["leaf", "Direct Sourcing", "Trusted cocoon farmers"],
 ];
 
 type IconName =
@@ -188,7 +177,7 @@ function App() {
 
   useEffect(() => {
     const revealTargets = document.querySelectorAll(
-      ".section-title, .product-card, .advantage, .factory__heading, .factory__gallery figure, .factory__features > div, .contact__header, .contact__grid, .map-wrap, .mill-arrival__content, .mill-gallery__heading, .mill-gallery figure",
+      ".section-title, .product-card, .advantage, .contact__header, .contact__grid, .map-wrap, .mill-arrival__content, .mill-gallery__heading, .mill-gallery figure",
     );
     revealTargets.forEach((element) => element.classList.add("reveal"));
     const revealObserver = new IntersectionObserver(
@@ -261,7 +250,7 @@ function App() {
     }
   }
 
-  const nav = [["Legacy", "#legacy"], ["Products", "#products"], ["Gallery", "#gallery"], ["Why Us", "#why-us"], ["Factory", "#factory"], ["Contact", "#contact"]];
+  const nav = [["Legacy", "#legacy"], ["Products", "#products"], ["Gallery", "#gallery"], ["Why Us", "#why-us"], ["Contact", "#contact"]];
 
   return (
     <div className="site-shell">
@@ -386,20 +375,28 @@ function App() {
           <div className="container">
             <div className="mill-gallery__heading">
               <SectionTitle
-                eyebrow="From the mill"
-                title="The work behind every thread."
-                intro="These views show the care carried through our process—from organised production and handling to the natural silk fibres that become dependable yarn for your loom."
+                eyebrow="Inside our mill"
+                title="Where heritage meets precision."
+                intro="Our Channapatana facility combines generations of reeling expertise with automated production and rigorous in-house quality control."
               />
-              <p className="mill-gallery__aside">A closer look at the people, material and mill discipline behind SRTSM supply.</p>
+              <p className="mill-gallery__aside">Every batch is watched, measured and documented—because consistency at the mill means confidence at the loom.</p>
             </div>
             <div className="mill-gallery__grid">
-              <figure className="mill-gallery__feature">
-                <div><img src={photos.warehouseRacks} alt="Finished silk components organised across the SRTSM warehouse" loading="lazy" /></div>
-                <figcaption><span>01</span><strong>Ready for the next stage</strong><p>Our warehouse keeps finished components organised and protected, helping us prepare orders accurately and dispatch with confidence.</p></figcaption>
+              <figure>
+                <div><img src={photos.reeling} alt="Automatic silk reeling machinery at the SRTSM mill" loading="lazy" /></div>
+                <figcaption><span>01</span><strong>Automated silk reeling</strong><p>Modern reeling machines draw fine silk thread from cocoons with precision and consistency, helping every batch meet a dependable standard.</p></figcaption>
               </figure>
               <figure>
-                <div><img src={photos.silkFibres} alt="Close-up of lustrous raw silk fibres prepared for processing" loading="lazy" /></div>
-                <figcaption><span>02</span><strong>Silk in its purest form</strong><p>Long, lustrous fibres are the starting point for the strength, smoothness and consistency our dealers expect from every batch.</p></figcaption>
+                <div><img src={photos.silkWindingFloor} alt="Multi-end silk winding machines arranged across the SRTSM floor" loading="lazy" /></div>
+                <figcaption><span>02</span><strong>Multi-end winding</strong><p>Our organised winding floor brings multiple ends together with careful handling, improving throughput without compromising the character of the silk.</p></figcaption>
+              </figure>
+              <figure>
+                <div><img src={photos.silkHanks} alt="Bright raw silk hanks prepared for weaving and further processing" loading="lazy" /></div>
+                <figcaption><span>03</span><strong>Silk with natural lustre</strong><p>These smooth, luminous hanks show the clean finish and even texture that make SRTSM silk a reliable choice for weavers and manufacturers.</p></figcaption>
+              </figure>
+              <figure>
+                <div><img src={photos.silkBales} alt="Packed raw silk bales ready for quality inspection and dispatch" loading="lazy" /></div>
+                <figcaption><span>04</span><strong>Ready for dispatch</strong><p>Finished silk is packed, labelled and checked before it leaves our warehouse for dealers, weavers and exporters across India.</p></figcaption>
               </figure>
             </div>
           </div>
@@ -430,25 +427,10 @@ function App() {
             <h2>A century of knowledge.<br /><em>One modern mill.</em></h2>
             <div className="mill-arrival__meta">
               <span><strong>12.6515° N</strong> Karnataka silk country</span>
-              <a href="#factory">Step inside the factory <Icon name="arrow" size={18} /></a>
+              <a href="#gallery">Explore the mill gallery <Icon name="arrow" size={18} /></a>
             </div>
           </div>
           <span className="mill-arrival__word">SRTSM</span>
-        </section>
-
-        <section id="factory" className="factory section">
-          <div className="container factory__heading">
-            <SectionTitle eyebrow="Inside our mill" title="Where heritage meets precision." intro="Our Channapatana facility combines generations of reeling expertise with automated production and rigorous in-house quality control." />
-            <p className="factory__aside">Every batch is watched, measured and documented—because consistency at the mill means confidence at the loom.</p>
-          </div>
-          <div className="factory__gallery">
-            <figure className="factory__main"><img src={photos.productionFloor} alt="SRTSM silk production floor with reeling and winding machinery" loading="lazy" /><figcaption><span>01</span> Production floor</figcaption></figure>
-            <figure><img src={photos.silkHanks} alt="Finished silk hanks hanging at the SRTSM mill" loading="lazy" /><figcaption><span>02</span> Silk hanks</figcaption></figure>
-            <figure><img src={photos.silkBales} alt="Packed SRTSM silk bales ready for dispatch" loading="lazy" /><figcaption><span>03</span> Packed bales</figcaption></figure>
-          </div>
-          <div className="container factory__features">
-            {factoryFeatures.map(([icon, title, text]) => <div key={title}><Icon name={icon as IconName} size={25} /><span><strong>{title}</strong><small>{text}</small></span></div>)}
-          </div>
         </section>
 
         <section id="contact" className="contact section">
