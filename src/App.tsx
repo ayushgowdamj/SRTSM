@@ -256,7 +256,7 @@ function App() {
       const body = encodeURIComponent(
         `Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\nPhone: ${formData.get("phone")}\nProduct: ${formData.get("product")}\n\n${formData.get("message")}`,
       );
-      window.location.href = `mailto:jagadeesh_srtextile@yahoo.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@srtextilesilkmills.com?subject=${subject}&body=${body}`;
       return;
     }
 
@@ -522,7 +522,7 @@ function App() {
                 <label><span>Tell us your requirement</span><textarea name="message" rows={5} placeholder="Quantity, grade, denier, packaging or delivery location..." /></label>
                 <div className="form__footer">
                   <button className="button" type="submit" disabled={submitState === "sending"}>{submitState === "sending" ? "Sending..." : "Send inquiry"} <Icon name="arrow" size={18} /></button>
-                  <p>{submitState === "sent" ? "Thank you. Our dealer team will respond shortly." : submitState === "error" ? "We could not send this. Please email jagadeesh_srtextile@yahoo.com." : "Your information stays private with us."}</p>
+                  <p>{submitState === "sent" ? "Thank you. Our dealer team will respond shortly." : submitState === "error" ? "We could not send this. Please email info@srtextilesilkmills.com." : "Your information stays private with us."}</p>
                 </div>
               </form>
               <aside className="contact-card">
@@ -534,7 +534,7 @@ function App() {
                 </div>
                 <div className="contact-card__details">
                   <a href="tel:+919980921696"><Icon name="phone" /><span>+91 9980921696<br />+91 9008782714</span></a>
-                  <a href="mailto:jagadeesh_srtextile@yahoo.com"><Icon name="mail" /><span>jagadeesh_srtextile@yahoo.com</span></a>
+                  <a href="mailto:info@srtextilesilkmills.com"><Icon name="mail" /><span>info@srtextilesilkmills.com</span></a>
                   <div><Icon name="clock" /><span>Working Hours - 24hrs<br />Sunday: Holiday</span></div>
                 </div>
               </aside>
@@ -552,7 +552,7 @@ function App() {
           <div><Logo light /><p>Silk mastery. Dealer trust.<br />Since 1920.</p></div>
           <div className="footer__links"><strong>Explore</strong>{nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</div>
           <div className="footer__links"><strong>Products</strong><a href="#products">Raw silk yarn</a><a href="#products">silk supply</a><a href="#contact">Sample requests</a></div>
-          <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:jagadeesh_srtextile@yahoo.com">jagadeesh_srtextile@yahoo.com</a></div>
+          <div className="footer__contact"><strong>Let’s talk silk.</strong><a href="mailto:info@srtextilesilkmills.com">info@srtextilesilkmills.com</a></div>
         </div>
         <div className="container footer__bottom"><span>© {new Date().getFullYear()} Sri Ranganatha Textile Silk Mills. All rights reserved.</span><span>Channapatana · Karnataka · India</span><a href="#top">Back to top ↑</a></div>
       </footer>
