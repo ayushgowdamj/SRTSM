@@ -43,7 +43,7 @@ const milestones = [
   {
     year: "1983",
     title: "The Third Generation A New Chapter",
-    text: "In 1983, the third generation entered the business. with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system and cottage filature , was gradually transformed, to advanced Multi‑End Silk Filatures and Japanese Semi Automatic machines  were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
+    text: "In 1983, the third generation entered the business, with Mr. C.R. Jagadeesh and Late Shri C.R. Devraj joining the journey and taking forward the family's rich silk heritage. With a vision to modernise and expand the business, the traditional hand charkha system and cottage filature were gradually transformed as automatic reeling machines were introduced. This transition represented a major milestone in the history of the organisation, combining generations of traditional silk knowledge with improved production methods and technology.",
   },
   {
     year: "Modern Era",
@@ -58,11 +58,11 @@ const advantages = [
   ["people", "Dealer-First Partnership", "Responsive support, transparent communication and flexible long-term contracts."],
   ["tag", "Decades of Trust", "With over a century of silk heritage, we have built lasting relationships founded on integrity, consistency, and an unwavering commitment to quality."],
   ["truck", "Pan-India Logistics", "Dependable dispatch to major silk hubs including Varanasi, Surat and Bengaluru."],
-  ["flask", "Samples & Consultation", "Expert guidance and evaluated samples before you commit to a bulk order."],
+  ["flask", "Samples & Consultation", "Expert guidance and evaluated samples before you commit to a larger order."],
 ];
 
 const factoryFeatures = [
-  ["gear", "Automatic Reeling", "Modern multi-end systems"],
+  ["gear", "Automatic Reeling", "Modern automatic reeling systems"],
   ["flask", "In-house QC Lab", "Batch-level grade testing"],
   ["pin", "Karnataka Location", "At the heart of silk country"],
   ["leaf", "Direct Sourcing", "Trusted cocoon farmers"],
@@ -321,7 +321,7 @@ function App() {
               </div>
             </div>
             <div className="hero__visual">
-              <div className="hero__image"><img src="/src/assets/traditional-silk-reeling-hero.webp" srcset="/src/assets/traditional-silk-reeling-hero-320w.webp 320w, /src/assets/traditional-silk-reeling-hero-640w.webp 640w, /src/assets/traditional-silk-reeling-hero-960w.webp 960w, /src/assets/traditional-silk-reeling-hero-1200w.webp 1200w" sizes="(max-width: 768px) 90vw, (max-width: 1024px) 70vw, 600px" alt="Traditional master silk reeling by hand charkha with hot water cocoon basin" loading="eager" /></div>
+              <div className="hero__image"><img src={traditionalSilkReeling} alt="Traditional master silk reeling by hand charkha with hot water cocoon basin" loading="eager" /></div>
               <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
               <div className="hero__caption"><span>01</span><p>Traditional charkha reeling and cocoon drafting mastery.</p></div>
             </div>
@@ -441,18 +441,18 @@ function App() {
                   <img src={srtsmAutoReelingLine} alt="SRTSM silk re‑reeling line with green silk reeling drums" loading="lazy" />
                 </div>
                 <figcaption>
-                  <strong>Automated Silk Reeling Line</strong>
+                  <strong>Silk Re-reeling Line</strong>
                   <p>Our state-of-the-art automatic reeling machines extract fine silk threads from cocoons with precision and consistency, ensuring uniform denier across every reel.</p>
                 </figcaption>
               </figure>
 
               <figure className="photo-gallery__item">
                 <div className="photo-gallery__img-wrap">
-                  <img src={srtsmMultiEndReeling} alt="SRTSM multi-end reeling machines on the factory floor" loading="lazy" />
+                  <img src={srtsmMultiEndReeling} alt="SRTSM automatic reeling machine on the factory floor" loading="lazy" />
                 </div>
                 <figcaption>
                   <strong>Automatic Reeling Machine</strong>
-                  <p>Our multi-end reeling floor houses precision machines that simultaneously reel silk from multiple cocoons, dramatically increasing throughput without compromising quality.</p>
+                  <p>Our automatic reeling machines draw fine silk from cocoons with steady control, supporting consistent yarn quality and reliable production.</p>
                 </figcaption>
               </figure>
 
@@ -461,7 +461,7 @@ function App() {
                   <img src={srtsmSilkReelsWarehouse} alt="Wooden silk reel frames stacked in SRTSM warehouse" loading="lazy" />
                 </div>
                 <figcaption>
-                  <strong>Re‑reeled Silk in Frames</strong>
+                  <strong>Re-reeled Silk in Frames</strong>
                   <p>Freshly reeled raw silk wound onto traditional wooden cross-reel frames, organized and ready for quality inspection before packing and dispatch to dealers.</p>
                 </figcaption>
               </figure>
@@ -472,7 +472,7 @@ function App() {
                 </div>
                 <figcaption>
                   <strong>Raw Silk Bales</strong>
-                  <p>Tightly packed and labeled raw silk bales stacked in our dispatch warehouse, ready for bulk delivery to weavers, dealers, and exporters across India.</p>
+                  <p>Tightly packed and labeled raw silk bales stacked in our dispatch warehouse, ready for delivery to weavers, dealers, and exporters across India.</p>
                 </figcaption>
               </figure>
 
