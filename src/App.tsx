@@ -438,21 +438,21 @@ function App() {
 
               <figure className="photo-gallery__item">
                 <div className="photo-gallery__img-wrap">
-                  <img src={srtsmAutoReelingLine} alt="SRTSM silk re‑reeling line with green silk reeling drums" loading="lazy" />
-                </div>
-                <figcaption>
-                  <strong>Silk Re-reeling Line</strong>
-                  <p>Our state-of-the-art automatic reeling machines extract fine silk threads from cocoons with precision and consistency, ensuring uniform denier across every reel.</p>
-                </figcaption>
-              </figure>
-
-              <figure className="photo-gallery__item">
-                <div className="photo-gallery__img-wrap">
                   <img src={srtsmMultiEndReeling} alt="SRTSM automatic reeling machine on the factory floor" loading="lazy" />
                 </div>
                 <figcaption>
                   <strong>Automatic Reeling Machine</strong>
                   <p>Our automatic reeling machines draw fine silk from cocoons with steady control, supporting consistent yarn quality and reliable production.</p>
+                </figcaption>
+              </figure>
+
+              <figure className="photo-gallery__item">
+                <div className="photo-gallery__img-wrap">
+                  <img src={srtsmAutoReelingLine} alt="SRTSM silk re‑reeling line with green silk reeling drums" loading="lazy" />
+                </div>
+                <figcaption>
+                  <strong>Silk Re-reeling Line</strong>
+                  <p>Our state-of-the-art automatic reeling machines extract fine silk threads from cocoons with precision and consistency, ensuring uniform denier across every reel.</p>
                 </figcaption>
               </figure>
 
