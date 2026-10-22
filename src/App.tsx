@@ -8,6 +8,7 @@ import silkHanks from "./assets/srtsm-silk-hanks.jpg";
 import srtsmLogo from "./assets/srtsm-logo.png";
 import finishedSilkReels from "./assets/finished-silk-reels.jpg";
 import rawSilkLustre from "./assets/raw-silk-lustre.jpg";
+import { Analytics } from "@vercel/analytics/react";
 import srtsmAutoReelingLine from "./assets/srtsm_auto_reeling_line.jpg";
 import srtsmMultiEndReeling from "./assets/srtsm_multi_end_reeling.jpg";
 import srtsmSilkReelsWarehouse from "./assets/srtsm_silk_reels_warehouse.jpg";
@@ -284,6 +285,7 @@ function App() {
 
   return (
     <div className="site-shell">
+      <Analytics />
       <div className="scroll-progress" aria-hidden="true" />
       <div className="scroll-progress" aria-hidden="true" />
       <header className="nav-wrap">
