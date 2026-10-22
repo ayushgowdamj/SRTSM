@@ -1,9 +1,9 @@
-import fs from "fs";
-import path from "path";
-import sharp from "sharp";
+import fs from "fs"
+import path from "path"
+import sharp from "sharp"
 
-const srcDir = path.resolve("src/assets");
-const outDir = path.resolve("public/assets-optimized");
+const srcDir = path.resolve("src/assets")
+const outDir = path.resolve("public/assets-optimized")
 
 // Images to convert to WebP + AVIF with responsive widths
 const images = [
@@ -20,40 +20,39 @@ const images = [
   "srtsm_multi_end_reeling.jpg",
   "srtsm_silk_reels_warehouse.jpg",
   "srtsm_silk_bales_stack.jpg",
-];
+]
 
 async function convert() {
-  fs.mkdirSync(outDir, { recursive: true });
+  fs.mkdirSync(outDir, { recursive: true })
   for (const name of images) {
-    const inPath = path.join(srcDir, name);
-    if (!fs.existsSync(inPath)) continue;
-    const base = path.parse(name).name;
+    const inPath = path.join(srcDir, name)
+    if (!fs.existsSync(inPath)) continue
+    const base = path.parse(name).name
 
     // Hero gets full responsive widths; others get width 1200 max
-    const widths = base === "traditional-silk-reeling-hero"
-      ? [320, 640, 960, 1200]
-      : [1200];
+    const widths =
+      base === "traditional-silk-reeling-hero" ? [320, 640, 960, 1200] : [1200]
 
     for (const width of widths) {
       const jpegBuffer = await sharp(inPath)
         .resize({ width, withoutEnlargement: true })
         .webp({ quality: 82 })
-        .toBuffer();
-      fs.writeFileSync(path.join(outDir, `${base}-${width}w.webp`), jpegBuffer);
+        .toBuffer()
+      fs.writeFileSync(path.join(outDir, `${base}-${width}w.webp`), jpegBuffer)
 
       const avifBuffer = await sharp(inPath)
         .resize({ width, withoutEnlargement: true })
         .avif({ quality: 65 })
-        .toBuffer();
-      fs.writeFileSync(path.join(outDir, `${base}-${width}w.avif`), avifBuffer);
+        .toBuffer()
+      fs.writeFileSync(path.join(outDir, `${base}-${width}w.avif`), avifBuffer)
     }
     // Keep original fallback as PNG/JPEG
-    fs.copyFileSync(inPath, path.join(outDir, name));
+    fs.copyFileSync(inPath, path.join(outDir, name))
   }
-  console.log(`Converted ${images.length} images to WebP + AVIF in ${outDir}`);
+  console.log(`Converted ${images.length} images to WebP + AVIF in ${outDir}`)
 }
 
 convert().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+  console.error(e)
+  process.exit(1)
+})
