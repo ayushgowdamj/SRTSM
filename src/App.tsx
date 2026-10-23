@@ -380,7 +380,7 @@ function App() {
                   <span className="product-card__type">Dealer catalogue</span>
                   <h3>Raw Silk Yarn</h3>
                   <p>Premium mulberry silk with high filament length for power looms, hand looms, rapier loom and high-end weaving.</p>
-                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D, 50–70 D, 100–120 D, 150–200 D, 600–650 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>18-20 D, 20-22 D, 27-29 D, 36-40 D, 40-44 D, 100-120 D</dd></div><div><dt>Packaging</dt><dd>5 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
+                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>18-20 D, 20-22 D, 27-29 D, 36-40 D, 40-44 D, 100-120 D</dd></div><div><dt>Packaging</dt><dd>5 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Inquire for supply <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
