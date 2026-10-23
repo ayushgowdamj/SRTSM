@@ -309,9 +309,9 @@ function App() {
           <FloatingSilk />
           <div className="container hero__grid">
             <div className="hero__content">
-              <span className="eyebrow">Silk mastery since 1920</span>
-              <h1>Silk, perfected<br /><em>over generations.</em></h1>
-              <p>Premium raw silk yarn, reeled in Karnataka and supplied with confidence to textile manufacturers and dealers across India.</p>
+              <span className="eyebrow">Raw silk dealers · Mulberry silk suppliers since 1920</span>
+              <h1>Premium mulberry silk<br /><em>reeled for your loom.</em></h1>
+              <p>Premium grade mulberry silk yarn, reeled in Karnataka and supplied with confidence to raw silk dealers, textile manufacturers and weavers across India.</p>
               <div className="hero__actions">
                 <a href="#contact" className="button">Inquire for supply <Icon name="arrow" size={18} /></a>
                 <a href="#products" className="text-link">Explore our products <span>↓</span></a>
@@ -324,7 +324,7 @@ function App() {
             </div>
             <div className="hero__visual">
               <div className="hero__image"><img src={mulberrySilkReeling} alt="Traditional hand reeling of white mulberry silk from cocoons in a warm-water basin" loading="eager" /></div>
-              <div className="hero__stamp"><span>Premium<br />grade silk</span></div>
+              <div className="hero__stamp"><span>Premium grade<br />mulberry silk</span></div>
               <div className="hero__caption"><span>01</span><p>Fine mulberry silk is drawn from white cocoons and guided onto a hand-turned reel.</p></div>
             </div>
           </div>
@@ -337,7 +337,7 @@ function App() {
               {[0, 1].map((group) => (
                 <div className="marquee__group" key={group} aria-hidden={group === 1}>
                   <span>Silk mastery since 1920</span><i /> <span>600 kg daily capacity</span><i />
-                  <span>Premium silk grades</span><i /> <span>Pan-India supply</span><i />
+                  <span>Premium mulberry silk grades</span><i /> <span>Pan-India supply</span><i />
                 </div>
               ))}
             </div>
@@ -372,14 +372,14 @@ function App() {
 
         <section id="products" className="products section">
           <div className="container">
-            <SectionTitle eyebrow="Our offerings" title="Silk engineered for your loom." intro="Consistent raw material, flexible specifications, and a reliable supply partner for textile manufacturers and dealers." />
+            <SectionTitle eyebrow="Raw silk dealers &amp; suppliers" title="Mulberry silk engineered for your loom." intro="Consistent premium grade mulberry silk, flexible specifications, and a reliable supply partner for textile manufacturers, weavers and dealers." />
             <div className="product-grid">
               <article className="product-card">
                 <div className="product-card__image"><img src={photos.rawSilkLustre} alt="Finished SRTSM raw silk hanks ready for weaving" loading="lazy" /><span>01</span></div>
                 <div className="product-card__body">
                   <span className="product-card__type">Dealer catalogue</span>
                   <h3>Raw Silk Yarn</h3>
-                  <p>Premium mulberry silk with high filament length for power looms, hand looms, rapier loom and high-end weaving.</p>
+                  <p>Premium grade mulberry silk with high filament length for power looms, hand looms, rapier looms and high-end weaving.</p>
                   <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>18-20 D, 20-22 D, 27-29 D, 36-40 D, 40-44 D, 100-120 D</dd></div><div><dt>Packaging</dt><dd>5 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Inquire for supply <Icon name="arrow" size={18} /></a>
                 </div>
@@ -390,7 +390,7 @@ function App() {
                   <span className="product-card__type">Custom supply</span>
                   <h3>Raw<br />Silk Supply</h3>
                   <p>Customisable, mill-direct orders with dependable scheduling for textile manufacturers and established dealers.</p>
-                  <dl><div><dt>Minimum order</dt><dd>50 kg</dd></div><div><dt>Available grades</dt><dd>Premium silk grades tailored to buyer specifications</dd></div><div><dt>Packaging</dt><dd>Bags, skeins, cartons</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
+                  <dl><div><dt>Minimum order</dt><dd>50 kg</dd></div><div><dt>Available grades</dt><dd>Premium grade mulberry silk tailored to buyer specifications</dd></div><div><dt>Packaging</dt><dd>Bags, skeins, cartons</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Discuss your requirement <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
