@@ -309,8 +309,8 @@ function App() {
           <FloatingSilk />
           <div className="container hero__grid">
             <div className="hero__content">
-              <span className="eyebrow">Raw silk dealers · Mulberry silk suppliers since 1920</span>
-              <h1>Premium mulberry silk<br /><em>reeled for your loom.</em></h1>
+              <span className="eyebrow">Raw silk dealers · Premium mulberry silk dealers since 1920</span>
+              <h1>Raw silk dealers<br /><em>premium mulberry silk.</em></h1>
               <p>Premium grade mulberry silk yarn, reeled in Karnataka and supplied with confidence to raw silk dealers, textile manufacturers and weavers across India.</p>
               <div className="hero__actions">
                 <a href="#contact" className="button">Inquire for supply <Icon name="arrow" size={18} /></a>
