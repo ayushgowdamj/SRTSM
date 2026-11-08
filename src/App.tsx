@@ -1,4 +1,4 @@
-﻿import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import mulberrySilkReeling from "./assets/golden-silk-reeling-workshop.png";
 import automaticReeling from "./assets/srtsm-reeling-line.jpg";
 import factoryExterior from "./assets/srtsm-factory-exterior.jpg";
@@ -380,7 +380,7 @@ function App() {
                   <span className="product-card__type">Dealer catalogue</span>
                   <h3>Raw Silk Yarn</h3>
                   <p>Premium grade mulberry silk with high filament length for power looms, hand looms, rapier looms and high-end weaving.</p>
-                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>18-20 D, 20-22 D, 27-29 D, 36-40 D, 40-44 D, 100-120 D</dd></div><div><dt>Packaging</dt><dd>5 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
+                  <dl><div><dt>Denier</dt><dd>18–20 D, 20–22 D, 24–26 D, 26–28 D, 28–30 D, 30–34 D, 36–40 D, 40–44 D (Coarse Denier)</dd></div><div><dt>Most Common</dt><dd>18-20 D, 20-22 D, 27-29 D, 36-40 D, 40-44 D</dd></div><div><dt>Packaging</dt><dd>5 kg</dd></div><div><dt>Delivery</dt><dd>Pan-India</dd></div></dl>
                   <a href="#contact" className="card-link">Inquire for supply <Icon name="arrow" size={18} /></a>
                 </div>
               </article>
